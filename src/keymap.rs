@@ -20,11 +20,11 @@ pub const fn get_default_keymap() -> [[[KeyAction; COL]; ROW]; NUM_LAYER] {
 
         // Fn layer
         layer!([
-            [TRPT, k!(F1), k!(F2), k!(F3), k!(F4), k!(F5), k!(F6), k!(F7), k!(F8), k!(F9), k!(F10), k!(F11), k!(F12), k!(Delete)], 
+            [k!(Grave), k!(F1), k!(F2), k!(F3), k!(F4), k!(F5), k!(F6), k!(F7), k!(F8), k!(F9), k!(F10), k!(F11), k!(F12), TRPT], 
             [TRPT, TRPT, k!(Up), TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, k!(PrintScreen), k!(Home), k!(PageUp), TRPT], 
             [TRPT, k!(Left), k!(Down), k!(Right), TRPT, TRPT, TRPT, TRPT, TRPT, k!(Insert), TRPT, k!(End), k!(PageDown), TRPT], 
             [TRPT, TRPT, TRPT, TRPT, k!(BrightnessDown), k!(BrightnessUp), k!(AudioVolDown), k!(AudioVolUp), k!(AudioMute), k!(MediaRewind), k!(MediaFastForward), k!(MediaPlayPause), TRPT, TRPT], 
-            [TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT]
+            [TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, TRPT, k!(Delete), TRPT, TRPT]
         ]),
     ]
 }
