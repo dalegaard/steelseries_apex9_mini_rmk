@@ -10,6 +10,10 @@ rustflags = [
   "link-arg=--nmagic",
   "-C",
   "link-args=-znostart-stop-gc",
+  "-Z",
+  "location-detail=none",
+  "-Z",
+  "fmt-debug=none",
 ]
 
 [build]
@@ -18,3 +22,7 @@ target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
 [env]
 DEFMT_LOG = "info"
 RUST_MIN_STACK = "16777216"
+
+[unstable]
+build-std = ["core", "panic_abort"]
+build-std-features = ["optimize_for_size"]
