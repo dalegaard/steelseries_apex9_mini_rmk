@@ -36,17 +36,17 @@ compatible with a STM32L412RB MCU.
 
 Once the board has been cleared, the firmware can be flashed either with DFU
 over USB, or via the already connected debugger. The compiled firmware image
-lives at `target/thumbsv7em-none-eabihf/release/steelseries_apex9_mini_rmk`. It
+lives at `target/thumbsv7em-none-eabihf/release/steelseries-apex9-mini-rmk`. It
 can be flashed e.g. with `probe-rs`:
 
 ```sh
-probe-rs download --chip stm32l412rb target/thumbv7em-none-eabihf/release/steelseries_apex9_mini_rmk
+probe-rs download --chip stm32l412rb target/thumbv7em-none-eabihf/release/steelseries-apex9-mini-rmk
 ```
 
 To flash with DFU, first create a raw binary and then flash it with `dfu-util`:
 
 ```sh
-arm-none-eabi-objcopy target/thumbv7em-none-eabihf/release/steelseries_apex9_mini_rmk -O binary /tmp/apex9.bin
+arm-none-eabi-objcopy target/thumbv7em-none-eabihf/release/steelseries-apex9-mini-rmk -O binary /tmp/apex9.bin
 dfu-util -d 04d8:df11 -a 0 -D /tmp/apex9.bin -s 0x08000000:leave
 ```
 
